@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1 class="text-2xl font-bold mb-4 text-center">Flask Simple App</h1>
+<div class="container mx-auto px-4 p-3">
+    <h2 class ="text-xl text-center">Tampilkan pesan hello</h2>
+    <form action="/submit" method="POST">
+        <label for="name">Masukkan Nama Anda:</label>
+        <input type="text" name="name" placeholder="Nama" required class="w-full px-3 py-2 border border-gray-300 rounded">
+        <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Submit</button>
+    </form>
+</div>
+
+<div class="container mx-auto px-4 p-3">
+    <h2 class ="text-xl text-center">Simpan ke database sederhana</h2>
+    <p>Masukkan Nama dan Email Anda:</p>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Nama" required class="w-full px-3 py-2 border border-gray-300 rounded"><br>
+        <input type="email" name="email" placeholder="Email" required class="w-full px-3 py-2 border border-gray-300 rounded"><br>
+        <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Simpan</button>
+    </form>
+</div>
+<a href="/users" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Lihat Daftar Pengguna</a>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
+
+
+<!-- Tanpa menggunakant template base (inheritance) -->
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask UI App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Welcome to My Flask App</h1>
+    <form action="/submit" method="POST">
+        <label for="name">Enter your name:</label>
+        <input type="text" name="name" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+-->

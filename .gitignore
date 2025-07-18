@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.Python
+build/
+dist/
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Flask specific files
+instance/ # Flask's instance folder for configuration and database files
+.webassets-cache/ # Flask-Webassets cache
+
+# Database files
+*.sqlite3
+*.db
+*.sqlite
+
+# Log files
+*.log
+
+# Environment variables
+.env
+.flaskenv
+
+# Miscellaneous
+tmp/
+
+__pycache__/
