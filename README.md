@@ -24,6 +24,14 @@ python app.py
 **Langkah 3** : Akses aplikasi
 Pada browser, buka : `localhost:5000`
 
+## Cara Menjalankan Pytest
+
+```bash
+# pindah ke folder myapp/ , lalu:
+
+PYTHONPATH=. pytest -v
+```
+
 ## TO-DO
 
 1. Buat menu login. Apabila login sebagai admin, maka bisa melakukan edit db, tetapi kalau user, hanya dapat tampilan awal.
